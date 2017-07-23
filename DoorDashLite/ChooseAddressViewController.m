@@ -28,13 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.addressBar.delegate = self;
-    UIImage *chooseAddressImage = [UIImage imageNamed:@"nav-address"];
+    self.navigationItem.title = @"Choose an address";
+    
     /*
     
      [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav-address"]];
     [[UIBarButtonItem alloc] initWithImage:@"nav-address" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"plz" style:UIBarButtonItemStylePlain target:nil action:nil];
-    */
+    
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:chooseAddressImage
                                                                              style:UIBarButtonItemStylePlain
@@ -42,14 +43,11 @@
                                                                             action:nil];
     
     
-    self.navigationItem.backBarButtonItem.tintColor = nil;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:chooseAddressImage
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:nil
-                                                                            action:nil];
+    */
     
-    self.navigationItem.title = @"Choose an address";
+    //self.navigationItem.backBarButtonItem = nil;
+    
     // Do any additional setup after loading the view.
 }
 

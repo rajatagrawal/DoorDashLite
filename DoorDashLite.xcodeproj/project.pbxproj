@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A24DD641F23B9D600BA6FFB /* `.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "`.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A24DD641F23B9D600BA6FFB /* DoorDashLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDashLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A24DD681F23B9D700BA6FFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A24DD6A1F23B9D700BA6FFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A24DD6B1F23B9D700BA6FFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		4A24DD651F23B9D600BA6FFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A24DD641F23B9D600BA6FFB /* `.app */,
+				4A24DD641F23B9D600BA6FFB /* DoorDashLite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A24DD631F23B9D600BA6FFB /* ` */ = {
+		4A24DD631F23B9D600BA6FFB /* DoorDashLite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A24DD7E1F23B9D700BA6FFB /* Build configuration list for PBXNativeTarget "`" */;
+			buildConfigurationList = 4A24DD7E1F23B9D700BA6FFB /* Build configuration list for PBXNativeTarget "DoorDashLite" */;
 			buildPhases = (
 				4A24DD601F23B9D600BA6FFB /* Sources */,
 				4A24DD611F23B9D600BA6FFB /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = "`";
+			name = DoorDashLite;
 			productName = DoorDashLite;
-			productReference = 4A24DD641F23B9D600BA6FFB /* `.app */;
+			productReference = 4A24DD641F23B9D600BA6FFB /* DoorDashLite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A24DD631F23B9D600BA6FFB /* ` */,
+				4A24DD631F23B9D600BA6FFB /* DoorDashLite */,
 			);
 		};
 /* End PBXProject section */
@@ -319,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A24DD7E1F23B9D700BA6FFB /* Build configuration list for PBXNativeTarget "`" */ = {
+		4A24DD7E1F23B9D700BA6FFB /* Build configuration list for PBXNativeTarget "DoorDashLite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A24DD7F1F23B9D700BA6FFB /* Debug */,

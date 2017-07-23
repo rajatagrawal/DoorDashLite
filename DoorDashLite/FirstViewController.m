@@ -17,25 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIImage *selectedImage = [[UIImage imageNamed:@"tab-explore"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage = selectedImage;
+    
     NSLog(@"First view controller did load");
-    NSLog(@"title is %@", self.navigationItem.leftBarButtonItem.title);
-    self.navigationItem.leftBarButtonItem.title = @"kuch bhi";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"ae lo" style:UIBarButtonItemStylePlain target:nil action:nil];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:
-                                            [NSArray arrayWithObjects:
-                                             [UIImage imageNamed:@"up.png"],
-                                             [UIImage imageNamed:@"down.png"],
-                                             nil]];
-    
-    //[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    segmentedControl.frame = CGRectMake(0, 0, 90, 20);
-    segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
-    segmentedControl.momentary = YES;
-    
-    UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:segmentedControl];
-    self.navigationItem.rightBarButtonItem = segmentBarItem;
+    UIImage *chooseAddressImage = [UIImage imageNamed:@"nav-address"];
+    self.navigationItem.title = @"acha ho gaya";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"aiyo" style:UIBarButtonItemStylePlain target:nil action:nil];
+    //self.navigationItem.hidesBackButton = NO;
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"aiyo" style:UIBarButtonItemStylePlain target:nil action:nil];
+    /*
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:chooseAddressImage
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:nil
+                                                                            action:nil];
+     */
 }
 
 
