@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		4A24DD691F23B9D700BA6FFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A24DD681F23B9D700BA6FFB /* main.m */; };
 		4A24DD6C1F23B9D700BA6FFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A24DD6B1F23B9D700BA6FFB /* AppDelegate.m */; };
-		4A24DD6F1F23B9D700BA6FFB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A24DD6E1F23B9D700BA6FFB /* FirstViewController.m */; };
-		4A24DD721F23B9D700BA6FFB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A24DD711F23B9D700BA6FFB /* SecondViewController.m */; };
 		4A24DD751F23B9D700BA6FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A24DD731F23B9D700BA6FFB /* Main.storyboard */; };
 		4A24DD771F23B9D700BA6FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A24DD761F23B9D700BA6FFB /* Assets.xcassets */; };
 		4A24DD7A1F23B9D700BA6FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A24DD781F23B9D700BA6FFB /* LaunchScreen.storyboard */; };
 		4A7582CA1F241FB300DDE4FB /* ChooseAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7582C91F241FB300DDE4FB /* ChooseAddressViewController.m */; };
+		4AF1FB841F24F1DD002D1CC8 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF1FB831F24F1DD002D1CC8 /* ExploreViewController.m */; };
+		4AF1FB871F24F41F002D1CC8 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF1FB861F24F41F002D1CC8 /* FavoritesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,16 +22,16 @@
 		4A24DD681F23B9D700BA6FFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A24DD6A1F23B9D700BA6FFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A24DD6B1F23B9D700BA6FFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A24DD6D1F23B9D700BA6FFB /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		4A24DD6E1F23B9D700BA6FFB /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		4A24DD701F23B9D700BA6FFB /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		4A24DD711F23B9D700BA6FFB /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		4A24DD741F23B9D700BA6FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A24DD761F23B9D700BA6FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A24DD791F23B9D700BA6FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A24DD7B1F23B9D700BA6FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7582C81F241FB300DDE4FB /* ChooseAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseAddressViewController.h; sourceTree = "<group>"; };
 		4A7582C91F241FB300DDE4FB /* ChooseAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseAddressViewController.m; sourceTree = "<group>"; };
+		4AF1FB821F24F1DD002D1CC8 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		4AF1FB831F24F1DD002D1CC8 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		4AF1FB851F24F41F002D1CC8 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		4AF1FB861F24F41F002D1CC8 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +66,6 @@
 			children = (
 				4A24DD6A1F23B9D700BA6FFB /* AppDelegate.h */,
 				4A24DD6B1F23B9D700BA6FFB /* AppDelegate.m */,
-				4A24DD6D1F23B9D700BA6FFB /* FirstViewController.h */,
-				4A24DD6E1F23B9D700BA6FFB /* FirstViewController.m */,
-				4A24DD701F23B9D700BA6FFB /* SecondViewController.h */,
-				4A24DD711F23B9D700BA6FFB /* SecondViewController.m */,
 				4A24DD731F23B9D700BA6FFB /* Main.storyboard */,
 				4A24DD761F23B9D700BA6FFB /* Assets.xcassets */,
 				4A24DD781F23B9D700BA6FFB /* LaunchScreen.storyboard */,
@@ -77,6 +73,10 @@
 				4A24DD671F23B9D600BA6FFB /* Supporting Files */,
 				4A7582C81F241FB300DDE4FB /* ChooseAddressViewController.h */,
 				4A7582C91F241FB300DDE4FB /* ChooseAddressViewController.m */,
+				4AF1FB821F24F1DD002D1CC8 /* ExploreViewController.h */,
+				4AF1FB831F24F1DD002D1CC8 /* ExploreViewController.m */,
+				4AF1FB851F24F41F002D1CC8 /* FavoritesViewController.h */,
+				4AF1FB861F24F41F002D1CC8 /* FavoritesViewController.m */,
 			);
 			path = DoorDashLite;
 			sourceTree = "<group>";
@@ -161,10 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A24DD721F23B9D700BA6FFB /* SecondViewController.m in Sources */,
 				4A24DD6C1F23B9D700BA6FFB /* AppDelegate.m in Sources */,
-				4A24DD6F1F23B9D700BA6FFB /* FirstViewController.m in Sources */,
+				4AF1FB871F24F41F002D1CC8 /* FavoritesViewController.m in Sources */,
 				4A7582CA1F241FB300DDE4FB /* ChooseAddressViewController.m in Sources */,
+				4AF1FB841F24F1DD002D1CC8 /* ExploreViewController.m in Sources */,
 				4A24DD691F23B9D700BA6FFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
