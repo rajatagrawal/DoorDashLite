@@ -16,6 +16,7 @@
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
         instance.currentLocation = CLLocationCoordinate2DMake(0, 0);
+        instance.favoriteRestaurants = [NSMutableArray array];
     });
     return instance;
 }

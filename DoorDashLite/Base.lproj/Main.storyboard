@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica</string>
-        </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </array>
@@ -84,7 +81,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leZ-wS-7dO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leZ-wS-7dO">
                                 <rect key="frame" x="47" y="260" width="281.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kfw-X7-9QA"/>
@@ -157,30 +154,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-k8-WeL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="nnh-k8-WeL" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" id="3tb-Wy-8Xi"/>
+                            <constraint firstItem="nnh-k8-WeL" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="BV5-PP-LmM"/>
+                            <constraint firstItem="nnh-k8-WeL" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="ELQ-9v-Khg"/>
+                            <constraint firstItem="nnh-k8-WeL" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Rd9-2r-mVd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pMh-wE-tUg"/>
+                    <connections>
+                        <outlet property="restaurantsTable" destination="nnh-k8-WeL" id="6vc-wc-Cpo"/>
+                        <segue destination="KEQ-59-P20" kind="show" identifier="showFavoriteRestaurant" id="13d-Rn-vZN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,7 +266,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="grM-dB-KYT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="tab-explore" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bg8-YN-Icb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bg8-YN-Icb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.98823529409999999" green="0.12941176469999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,6 +292,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2J-pJ-gNX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98823529409999999" green="0.12941176469999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.98823529409999999" green="0.12941176469999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -319,4 +312,7 @@
         <image name="tab-explore" width="28" height="24"/>
         <image name="tab-star" width="28" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="13d-Rn-vZN"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantPageViewController.h"
+#import "DataStore.h"
 
 @interface RestaurantPageViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *addToFavoritesButton;
@@ -20,8 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"restaurant data received is %@", self.restaurantData);
     
     self.menuItemsTable.dataSource = self;
     self.menuItemsTable.delegate = self;
@@ -110,6 +109,7 @@
         self.addToFavoritesButton.backgroundColor = UIColor.redColor;
         [self.addToFavoritesButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
         [self.addToFavoritesButton setTitle:@"★ Favorited" forState:UIControlStateNormal];
+        [DataStore.sharedInstance.favoriteRestaurants addObject:self.restaurantData];
     } else {
         self.addToFavoritesButton.backgroundColor = UIColor.whiteColor;
         [self.addToFavoritesButton setTitleColor:UIColor.redColor forState:UIControlStateNormal];

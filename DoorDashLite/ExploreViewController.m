@@ -57,7 +57,7 @@
         
         NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
         [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            [self.progressIndicator stopAnimating];
+            
             
             if (error) {
                 NSLog(@"There was an error retrieving results");
@@ -71,8 +71,8 @@
                 
                 NSJSONSerialization *dataJson = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
                 self.results = dataJson;
-                NSLog(@"results are %@, %lf, %lf", dataJson, DataStore.sharedInstance.currentLocation.longitude, DataStore.sharedInstance.currentLocation.latitude);
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.progressIndicator stopAnimating];
                     [self.restaurantsTable reloadData];
                 });
             }
@@ -128,6 +128,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showRestaurantPage" sender:((NSArray *)self.results)[indexPath.row]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

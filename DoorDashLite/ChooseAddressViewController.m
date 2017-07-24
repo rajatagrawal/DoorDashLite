@@ -43,8 +43,6 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    NSLog(@"User entered : %@", self.addressBar
-          .text);
     
     if (self.addressBar.text.length > 0) {
         MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
@@ -59,7 +57,6 @@
                                                                   handler:nil]];
               [self presentViewController:errorController animated:YES completion:nil];
             } else {
-                NSLog(@"Response is %@", response);
                 MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
                 pointAnnotation.title = response.mapItems.firstObject.name;
                 pointAnnotation.coordinate = CLLocationCoordinate2DMake(response.boundingRegion.center.latitude, response.boundingRegion.center.longitude);
@@ -84,13 +81,11 @@
         
         self.confirmAddressButton.hidden = YES;
         CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        NSLog(@"keyboard show frame is %lf %lf", keyboardFrame.size.height, keyboardFrame.size.width);
         
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.3];
         
         CGRect originalRect = self.view.frame;
-        NSLog(@"showing original keyboard frame is %lf", originalRect.size.height);
         originalRect.size.height -= keyboardFrame.size.height;
         self.view.frame = originalRect;
         
@@ -98,7 +93,16 @@
     }
 }
 - (IBAction)confirmAddress:(id)sender {
-    DataStore.sharedInstance.currentLocation = self.currentLocation;
+    if (self.currentLocation.longitude ==0 && self.currentLocation.latitude == 0) {
+        NSLog(@"There was an error retrieving results");
+        UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"No address selected" message:@"Please enter an address to start." preferredStyle:UIAlertControllerStyleAlert];
+        [errorController addAction:[UIAlertAction actionWithTitle:@"Okay"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:nil]];
+        [self presentViewController:errorController animated:YES completion:nil];
+    } else {
+        DataStore.sharedInstance.currentLocation = self.currentLocation;
+    }
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {

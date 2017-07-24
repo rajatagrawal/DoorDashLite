@@ -14,5 +14,6 @@
 +(instancetype)sharedInstance;
 
 @property (nonatomic, assign) CLLocationCoordinate2D currentLocation;
+@property (nonatomic, strong) NSMutableArray *favoriteRestaurants;
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoritesViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *restaurantsTable;
 
 @end
